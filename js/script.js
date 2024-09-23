@@ -324,7 +324,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
         dots.push(dot);
     }
 
-    let widthNumber = +width.slice(0, width.length - 2);
+    let widthNumber = +width.replace(/\D/g, '');
 
     next.addEventListener('click', () => {
         if (offset === widthNumber * (totalSlides - 1)) {
