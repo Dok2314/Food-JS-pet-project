@@ -1,6 +1,6 @@
 function timer() {
     // TIMER
-    const deadLine = '2024-09-14';
+    const deadLine = '2024-11-23';
 
     function getTimer(endTime) {
         let days = 0, hours = 0, minutes = 0, seconds = 0;
