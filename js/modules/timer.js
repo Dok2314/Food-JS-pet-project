@@ -1,6 +1,5 @@
-function timer() {
+function timer(id, deadLine) {
     // TIMER
-    const deadLine = '2024-11-23';
 
     function getTimer(endTime) {
         let days = 0, hours = 0, minutes = 0, seconds = 0;
@@ -26,11 +25,12 @@ function timer() {
         return !(num < 0) && num < 10 ? `0${num}` : num;
     }
 
-    function setClock(endTime) {
-        const days = document.querySelector('#days'),
-            hours = document.querySelector('#hours'),
-            minutes = document.querySelector('#minutes'),
-            seconds = document.querySelector('#seconds'),
+    function setClock(selector, endTime) {
+        const timer = document.querySelector(selector),
+            days = timer.querySelector('#days'),
+            hours = timer.querySelector('#hours'),
+            minutes = timer.querySelector('#minutes'),
+            seconds = timer.querySelector('#seconds'),
             timerId = setInterval(updateTime, 1000);
 
         updateTime();
@@ -49,7 +49,7 @@ function timer() {
         }
     }
 
-    setClock(deadLine);
+    setClock(id, deadLine);
 }
 
 export default timer;

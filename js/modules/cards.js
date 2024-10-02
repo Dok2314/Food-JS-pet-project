@@ -1,3 +1,5 @@
+import {getResource} from "../services/services.js";
+
 function cards() {
     // MenuCards
     class MenuCard {
@@ -35,16 +37,6 @@ function cards() {
 
             this.parent.append(div);
         }
-    }
-
-    const getResource = async (url) => {
-        const res = await fetch(url);
-
-        if (!res.ok) {
-            throw new Error(`Could not fetch ${url}, status: ${res.status}`);
-        }
-
-        return await res.json();
     }
 
     // getResource('http://localhost:3000/menu')

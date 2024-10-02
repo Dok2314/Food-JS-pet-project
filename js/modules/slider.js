@@ -1,13 +1,13 @@
-function slider() {
+function slider({container, slide, nextArrow, previousArrow, totalCounter, currentCounter, wrapper, field}) {
     // Slider with transform effect
-    const slides = document.querySelectorAll('.offer__slide'),
-        slider = document.querySelector('.offer__slider'),
-        next = document.querySelector('.offer__slider-next'),
-        previous = document.querySelector('.offer__slider-prev'),
-        current = document.querySelector('#current'),
-        total = document.querySelector('#total'),
-        slidesWrapper = document.querySelector('.offer__slider-wrapper'),
-        slidesInner = document.querySelector('.offer__slider-inner'),
+    const slides = document.querySelectorAll(slide),
+        slider = document.querySelector(container),
+        next = document.querySelector(nextArrow),
+        previous = document.querySelector(previousArrow),
+        current = document.querySelector(currentCounter),
+        total = document.querySelector(totalCounter),
+        slidesWrapper = document.querySelector(wrapper),
+        slidesInner = document.querySelector(field),
         width = window.getComputedStyle(slidesWrapper).width,
         totalSlides = slides.length;
 
